@@ -21,7 +21,7 @@ def read_sql_data():
             password=password,
             db=db
         )
-        logging.info("connection established", mydb)
+        logging.info("connection established %s", mydb)
         df=pd.read_sql_query('select * from students', mydb)
         print(df.head())
 
